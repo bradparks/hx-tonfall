@@ -1,13 +1,13 @@
 package tonfall.display;
 
-import flash.display.Sprite;
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.PixelSnapping;
-import flash.events.Event;
-import flash.geom.Rectangle;
-import flash.media.SoundMixer;
-import flash.utils.ByteArray;
+import nme.display.Sprite;
+import nme.display.Bitmap;
+import nme.display.BitmapData;
+import nme.display.PixelSnapping;
+import nme.events.Event;
+import nme.geom.Rectangle;
+//import nme.media.SoundMixer;
+import nme.utils.ByteArray;
 
 import tonfall.core.Driver;
 
@@ -94,7 +94,7 @@ class Spectrum extends Sprite
 		bitmapData.lock();
 		bitmapData.fillRect( bitmapData.rect, BACKGROUND );
 		
-		SoundMixer.computeSpectrum( outputArray, false );
+		//SoundMixer.computeSpectrum( outputArray, false );
 		
 		var l: Float;
 		var r: Float;
@@ -121,7 +121,7 @@ class Spectrum extends Sprite
 		bitmapData.lock();
 		bitmapData.fillRect( bitmapData.rect, BACKGROUND );
 		
-		SoundMixer.computeSpectrum( outputArray, true, 1 );
+		//SoundMixer.computeSpectrum( outputArray, true, 1 );
 		
 		var l: Float;
 		var r: Float;

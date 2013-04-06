@@ -1,6 +1,6 @@
 package tonematrix;
 
-import flash.display.Sprite;
+import nme.display.Sprite;
 
 class Button extends Sprite
 {

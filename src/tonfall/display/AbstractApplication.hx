@@ -1,9 +1,9 @@
 package tonfall.display;
 
-import flash.display.Sprite;
-import flash.display.StageScaleMode;
-import flash.display.StageAlign;
-import flash.events.Event;
+import nme.display.Sprite;
+import nme.display.StageScaleMode;
+import nme.display.StageAlign;
+import nme.events.Event;
 
 import haxe.Timer;
 

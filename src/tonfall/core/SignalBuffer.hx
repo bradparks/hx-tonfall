@@ -1,6 +1,6 @@
 package tonfall.core;
 
-import flash.Vector;
+import nme.Vector;
 
 class SignalBuffer 
 {

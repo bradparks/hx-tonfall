@@ -1,14 +1,14 @@
 package tonfall.core;
 
-import flash.events.SampleDataEvent;
-import flash.media.Sound;
-import flash.media.SoundChannel;
-import flash.utils.ByteArray;
+import nme.events.SampleDataEvent;
+import nme.media.Sound;
+import nme.media.SoundChannel;
+import nme.utils.ByteArray;
 
 import haxe.Stack;
 
 /**
- * Standard audio driver running on flash.media.Sound
+ * Standard audio driver running on nme.media.Sound
  * 
  * @author Andre Michelle
  */

@@ -1,3 +1,10 @@
+-main DemoToneMatrix
+-cp demo
+-cp src
+-lib nme
+-neko DemoToneMatrix.n
+
+--next
 -swf9 bin/DemoToneMatrix.swf
 -swf-version 10
 -main DemoToneMatrix

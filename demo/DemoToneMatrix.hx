@@ -1,9 +1,9 @@
 package ;
 
-import flash.Lib;
-import flash.display.Sprite;
-import flash.events.Event;
-import flash.events.MouseEvent;
+import nme.Lib;
+import nme.display.Sprite;
+import nme.events.Event;
+import nme.events.MouseEvent;
 
 import tonfall.core.Engine;
 import tonfall.core.TimeConversion;

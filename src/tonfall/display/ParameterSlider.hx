@@ -1,10 +1,10 @@
 package tonfall.display;
 
-import flash.display.Sprite;
-import flash.events.MouseEvent;
-import flash.text.TextFormat;
-import flash.text.TextField;
-import flash.text.TextFieldAutoSize;
+import nme.display.Sprite;
+import nme.events.MouseEvent;
+import nme.text.TextFormat;
+import nme.text.TextField;
+import nme.text.TextFieldAutoSize;
 
 import tonfall.core.Parameter;
 

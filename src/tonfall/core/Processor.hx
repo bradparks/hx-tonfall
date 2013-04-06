@@ -1,6 +1,6 @@
 package tonfall.core;
 
-import flash.Vector;
+import nme.Vector;
 
 /**
  * Processor is a member in the engine's processing chain.

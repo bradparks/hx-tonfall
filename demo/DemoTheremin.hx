@@ -1,7 +1,7 @@
 package ;
 
-import flash.Lib;
-import flash.events.MouseEvent;
+import nme.Lib;
+import nme.events.MouseEvent;
 
 import tonfall.display.AbstractApplication;
 import tonfall.util.Mapping;

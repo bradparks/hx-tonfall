@@ -4,7 +4,7 @@ import tonfall.core.BlockInfo;
 import tonfall.core.Processor;
 import tonfall.core.TimeEventNote;
 
-import flash.Vector;
+import nme.Vector;
 
 class TonematrixSequencer extends Processor
 {
