@@ -1,6 +1,6 @@
 package tonfall.core;
 
-import nme.Vector;
+import flash.Vector;
 
 /**
  * Processor is a member in the engine's processing chain.
@@ -23,7 +23,11 @@ class Processor
 	
 	public function addTimeEvent( event: TimeEvent ): Void
 	{
+#if flash
 		if( -1 < events.indexOf( event ) )
+#else
+    if (Lambda.has( events, event) )
+#end
 		{
 			throw 'Element already exists.';
 		}

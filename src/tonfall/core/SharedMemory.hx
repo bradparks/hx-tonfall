@@ -1,6 +1,6 @@
 package tonfall.core;
 
-import nme.utils.ByteArray;
+import flash.utils.ByteArray;
 
 class SharedMemory 
 {

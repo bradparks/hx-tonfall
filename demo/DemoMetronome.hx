@@ -1,6 +1,6 @@
 package ;
 
-import nme.Lib;
+import flash.Lib;
 
 import tonfall.display.AbstractApplication;
 

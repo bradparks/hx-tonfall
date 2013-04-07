@@ -1,6 +1,6 @@
 package tonfall.display;
 
-import nme.display.Sprite;
+import flash.display.Sprite;
 
 class ParameterSliderThumb extends Sprite
 {

@@ -1,7 +1,7 @@
 package ;
 
-import nme.Lib;
-import nme.events.Event;
+import flash.Lib;
+import flash.events.Event;
 
 import tonfall.display.AbstractApplication;
 

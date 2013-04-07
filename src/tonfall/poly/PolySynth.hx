@@ -1,6 +1,6 @@
 package tonfall.poly;
 
-import nme.Vector;
+import flash.Vector;
 
 import tonfall.core.Parameter;
 import tonfall.core.Signal;

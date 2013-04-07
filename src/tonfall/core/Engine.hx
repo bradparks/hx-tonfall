@@ -1,7 +1,7 @@
 package tonfall.core;
 
-import nme.Vector;
-import nme.utils.ByteArray;
+import flash.Vector;
+import flash.utils.ByteArray;
 
 class Engine 
 {

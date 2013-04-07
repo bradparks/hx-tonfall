@@ -1,9 +1,10 @@
 package tonfall.display;
 
-import nme.display.Sprite;
-import nme.display.StageScaleMode;
-import nme.display.StageAlign;
-import nme.events.Event;
+import flash.display.Sprite;
+import flash.display.StageScaleMode;
+import flash.display.StageAlign;
+import flash.events.Event;
+import flash.utils.ByteArray;
 
 import haxe.Timer;
 
@@ -45,7 +46,11 @@ class AbstractApplication extends Sprite
 		
 		
 		// preallocate memory for processing
-		SharedMemory.memory.length = Driver.BLOCK_SIZE << 3;
+    #if flash
+    SharedMemory.memory.length = Driver.BLOCK_SIZE << 3;
+    #else
+    SharedMemory.memory = new ByteArray(Driver.BLOCK_SIZE << 3);
+    #end
 		
 		driver.engine = engine;
 

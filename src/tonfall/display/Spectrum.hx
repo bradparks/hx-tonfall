@@ -1,13 +1,15 @@
 package tonfall.display;
 
-import nme.display.Sprite;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.PixelSnapping;
-import nme.events.Event;
-import nme.geom.Rectangle;
-//import nme.media.SoundMixer;
-import nme.utils.ByteArray;
+import flash.display.Sprite;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.PixelSnapping;
+import flash.events.Event;
+import flash.geom.Rectangle;
+#if flash
+import flash.media.SoundMixer;
+#end
+import flash.utils.ByteArray;
 
 import tonfall.core.Driver;
 
@@ -94,7 +96,9 @@ class Spectrum extends Sprite
 		bitmapData.lock();
 		bitmapData.fillRect( bitmapData.rect, BACKGROUND );
 		
-		//SoundMixer.computeSpectrum( outputArray, false );
+#if flash
+		SoundMixer.computeSpectrum( outputArray, false );
+#end
 		
 		var l: Float;
 		var r: Float;
@@ -121,7 +125,9 @@ class Spectrum extends Sprite
 		bitmapData.lock();
 		bitmapData.fillRect( bitmapData.rect, BACKGROUND );
 		
-		//SoundMixer.computeSpectrum( outputArray, true, 1 );
+#if flash
+		SoundMixer.computeSpectrum( outputArray, true, 1 );
+#end
 		
 		var l: Float;
 		var r: Float;
@@ -131,10 +137,10 @@ class Spectrum extends Sprite
 		for(x in 0...0x100)
 		{
 			outputArray.position = x << 2;
-			l = outputArray.readFloat();
+      l = readFloat(outputArray);
 
 			outputArray.position = ( x | 0x100 ) << 2;
-			r = outputArray.readFloat();
+      r = readFloat(outputArray);
 			
 			h = Math.floor(( l > r ? l : r ) * 0x80);
 
@@ -147,6 +153,16 @@ class Spectrum extends Sprite
 		
 		bitmapData.unlock();
 	}
+
+  function readFloat( ba : ByteArray )
+  {
+      try {
+          var out = ba.readFloat();
+          return out;
+      } catch (e : Dynamic) {
+          return 0;
+      }
+  }
 		
 	private function paintPeak( bitmapData: BitmapData, peak: Float ) : Void
 	{

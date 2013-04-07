@@ -1,14 +1,14 @@
 package tonfall.core;
 
-import nme.events.SampleDataEvent;
-import nme.media.Sound;
-import nme.media.SoundChannel;
-import nme.utils.ByteArray;
+import flash.events.SampleDataEvent;
+import flash.media.Sound;
+import flash.media.SoundChannel;
+import flash.utils.ByteArray;
 
 import haxe.Stack;
 
 /**
- * Standard audio driver running on nme.media.Sound
+ * Standard audio driver running on flash.media.Sound
  * 
  * @author Andre Michelle
  */
@@ -44,12 +44,14 @@ class Driver
 		_latency = 0.0;
 		
 		sound = new Sound();
+
+    zeroBytes = new ByteArray( #if !flash BLOCK_SIZE << 3 #end );
+    fillBytes = new ByteArray( #if !flash BLOCK_SIZE << 3 #end );
 		
-		zeroBytes = new ByteArray();
-		fillBytes = new ByteArray();
-		
+#if flash
 		zeroBytes.length = BLOCK_SIZE << 3;
 		fillBytes.length = BLOCK_SIZE << 3;
+#end
 
 		sound.addEventListener( SampleDataEvent.SAMPLE_DATA, sampleData );
 	}

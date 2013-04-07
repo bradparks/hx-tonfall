@@ -1,6 +1,6 @@
 package tonfall.core;
 
-import nme.Vector;
+import flash.Vector;
 
 class SignalBuffer 
 {
@@ -24,8 +24,11 @@ class SignalBuffer
 		var head: Signal;
 		var tail:Signal;
 
+#if flash
 		_vector = new Vector<Signal>( length, true );
-
+#else
+    _vector = new Vector<Signal>();
+#end
 		tail = head = _vector[0] = new Signal();
 
 		for(i in 0...length)
